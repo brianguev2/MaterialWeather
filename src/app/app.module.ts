@@ -9,10 +9,20 @@ import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CitySearchComponent } from './city-search/city-search.component';
 
 @NgModule({
-  declarations: [AppComponent, CurrentWeatherComponent, SideNavComponent],
-  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, MaterialModule, FlexLayoutModule],
+  declarations: [AppComponent, CurrentWeatherComponent, SideNavComponent, CitySearchComponent],
+  imports: [
+        BrowserModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        FlexLayoutModule,
+        FormsModule,
+        ReactiveFormsModule
+      ],
   providers: [WeatherService],
   bootstrap: [AppComponent],
 })
