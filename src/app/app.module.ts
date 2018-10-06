@@ -4,10 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CurrentWeatherComponent } from './current-weather/current-weather.component';
 import { WeatherService } from './weather/weather.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import 'hammerjs';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
-  declarations: [AppComponent, CurrentWeatherComponent],
-  imports: [BrowserModule, HttpClientModule],
+  declarations: [AppComponent, CurrentWeatherComponent, SideNavComponent],
+  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, MaterialModule, FlexLayoutModule],
   providers: [WeatherService],
   bootstrap: [AppComponent],
 })
